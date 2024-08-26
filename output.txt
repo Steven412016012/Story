@@ -1,0 +1,134 @@
+christinawunardi@Christinas-MacBook-Air fullstack dev % cd '/Users/christinawunardi/Documents/udemy/fullstack dev/git'
+christinawunardi@Christinas-MacBook-Air git % mkdir Story
+christinawunardi@Christinas-MacBook-Air git % cd Story
+christinawunardi@Christinas-MacBook-Air Story % ls
+christinawunardi@Christinas-MacBook-Air Story % touch chapter1.txt
+christinawunardi@Christinas-MacBook-Air Story % open -a '/Users/christinawunardi/Documents/udemy/fullstack dev/git/Story/chapter1.txt'
+The application /Users/christinawunardi/Documents/udemy/fullstack dev/git/Story/chapter1.txt cannot be opened for an unexpected reason, error=Error Domain=RBSRequestErrorDomain Code=5 "Launch failed." UserInfo={NSLocalizedFailureReason=Launch failed., NSUnderlyingError=0x7f7df47135e0 {Error Domain=NSPOSIXErrorDomain Code=111 "Unknown error: 111" UserInfo={NSLocalizedDescription=Launchd job spawn failed}}}
+christinawunardi@Christinas-MacBook-Air Story % open -a /Applications/Visual\ Studio\ Code.app chapter1.txt
+christinawunardi@Christinas-MacBook-Air Story % git init
+Initialized empty Git repository in /Users/christinawunardi/Documents/udemy/fullstack dev/git/Story/.git/
+christinawunardi@Christinas-MacBook-Air Story % ls -a
+.               ..              .git            chapter1.txt
+christinawunardi@Christinas-MacBook-Air Story % git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+christinawunardi@Christinas-MacBook-Air Story % git add chapter1.txt
+christinawunardi@Christinas-MacBook-Air Story % git status          
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+christinawunardi@Christinas-MacBook-Air Story % git commit -m "Complete Chapter 1" 
+[main (root-commit) f2481cf] Complete Chapter 1
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 chapter1.txt
+christinawunardi@Christinas-MacBook-Air Story % git log
+commit f2481cf808887ed5901b1bc8eae1c839830010f5 (HEAD -> main)
+Author: Steven Wunardi <steven.wunardi2@gmail.com>
+Date:   Thu Aug 22 14:15:03 2024 +0700
+
+    Complete Chapter 1
+christinawunardi@Christinas-MacBook-Air Story % touch chapter2.txt
+christinawunardi@Christinas-MacBook-Air Story % touch chapter3.txt
+christinawunardi@Christinas-MacBook-Air Story % open -a /Applications/Visual\ Studio\ Code.app chapter3.txt                           
+christinawunardi@Christinas-MacBook-Air Story % git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+christinawunardi@Christinas-MacBook-Air Story % git add .                                             
+christinawunardi@Christinas-MacBook-Air Story % git status                                                 
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+christinawunardi@Christinas-MacBook-Air Story % git commit -m "Complete Chapter 2 and 3"                   
+[main 60e51db] Complete Chapter 2 and 3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+christinawunardi@Christinas-MacBook-Air Story % git log
+commit 60e51dbc35e838b0fab421707b355b5752213b6f (HEAD -> main)
+Author: Steven Wunardi <steven.wunardi2@gmail.com>
+Date:   Thu Aug 22 14:20:17 2024 +0700
+
+    Complete Chapter 2 and 3
+
+commit f2481cf808887ed5901b1bc8eae1c839830010f5
+Author: Steven Wunardi <steven.wunardi2@gmail.com>
+Date:   Thu Aug 22 14:15:03 2024 +0700
+
+    Complete Chapter 1
+christinawunardi@Christinas-MacBook-Air Story % diff chapter3.txt
+usage: diff [-aBbdilpTtw] [-c | -e | -f | -n | -q | -u] [--ignore-case]
+            [--no-ignore-case] [--normal] [--strip-trailing-cr] [--tabsize]
+            [-I pattern] [-F pattern] [-L label] file1 file2
+       diff [-aBbdilpTtw] [-I pattern] [-L label] [--ignore-case]
+            [--no-ignore-case] [--normal] [--strip-trailing-cr] [--tabsize]
+            [-F pattern] -C number file1 file2
+       diff [-aBbdiltw] [-I pattern] [--ignore-case] [--no-ignore-case]
+            [--normal] [--strip-trailing-cr] [--tabsize] -D string file1 file2
+       diff [-aBbdilpTtw] [-I pattern] [-L label] [--ignore-case]
+            [--no-ignore-case] [--normal] [--tabsize] [--strip-trailing-cr]
+            [-F pattern] -U number file1 file2
+       diff [-aBbdilNPprsTtw] [-c | -e | -f | -n | -q | -u] [--ignore-case]
+            [--no-ignore-case] [--normal] [--tabsize] [-I pattern] [-L label]
+            [-F pattern] [-S name] [-X file] [-x pattern] dir1 dir2
+       diff [-aBbditwW] [--expand-tabs] [--ignore-all-blanks]
+            [--ignore-blank-lines] [--ignore-case] [--minimal]
+            [--no-ignore-file-name-case] [--strip-trailing-cr]
+            [--suppress-common-lines] [--tabsize] [--text] [--width]
+            -y | --side-by-side file1 file2
+       diff [--help] [--version]
+christinawunardi@Christinas-MacBook-Air Story % git diff chapter3.txt
+christinawunardi@Christinas-MacBook-Air Story % git diff chapter3.txt
+christinawunardi@Christinas-MacBook-Air Story % 
+
+
+//Remote repository
+christinawunardi@Christinas-MacBook-Air fullstack dev % cd'/Users/christinawunardi/Documents/udemy/fullstack dev/git/Story'
+zsh: no such file or directory: cd/Users/christinawunardi/Documents/udemy/fullstack dev/git/Story
+christinawunardi@Christinas-MacBook-Air fullstack dev % git log
+fatal: not a git repository (or any of the parent directories): .git
+christinawunardi@Christinas-MacBook-Air fullstack dev % cd '/Users/christinawunardi/Documents/udemy/fullstack dev/git/Story' 
+christinawunardi@Christinas-MacBook-Air Story % git log
+commit 60e51dbc35e838b0fab421707b355b5752213b6f (HEAD -> main)
+Author: Steven Wunardi <steven.wunardi2@gmail.com>
+Date:   Thu Aug 22 14:20:17 2024 +0700
+
+    Complete Chapter 2 and 3
+
+commit f2481cf808887ed5901b1bc8eae1c839830010f5
+Author: Steven Wunardi <steven.wunardi2@gmail.com>
+Date:   Thu Aug 22 14:15:03 2024 +0700
+
+    Complete Chapter 1
+christinawunardi@Christinas-MacBook-Air Story % git remote add origin https://github.com/Steven412016012/Story.git
+christinawunardi@Christinas-MacBook-Air Story % git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 606 bytes | 33.00 KiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Steven412016012/Story.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+christinawunardi@Christinas-MacBook-Air Story % 
